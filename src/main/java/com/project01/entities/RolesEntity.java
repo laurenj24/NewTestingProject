@@ -3,6 +3,7 @@ package com.project01.entities;
 import javax.persistence.*;
 import java.util.Objects;
 
+
 @Entity
 @Table(name = "roles", schema = "stockmanagement", catalog = "")
 public class RolesEntity {
