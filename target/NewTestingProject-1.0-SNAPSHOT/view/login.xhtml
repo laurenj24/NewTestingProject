@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="/WEB-INF/template/simple.xhtml">
+    <ui:define name="title">
+        #{bundle['application.loginpage.title']}
+    </ui:define>
+    <ui:define name="content">
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputText value="#{bundle['user.name']}"></h:outputText>
+                <h:inputText id="userName"
+                             value="#{userBean.user.firstName}"
+                             required="true"
+                             requiredMessage="#{bundle['user.name.validation']}">
+                </h:inputText>
+                <h:message for="userName" styleClass="errorMessage"/>
+                <h:outputText value="#{bundle['user.password']}"></h:outputText>
+                <h:inputSecret id="password"
+                               value="#{userBean.user.password}"
+                               required="true"
+                               requiredMessage="#{bundle['user.password.validation']}">
+                </h:inputSecret>
+                <h:message for="password" styleClass="errorMessage"/>
+            </h:panelGrid>
+            <h:commandButton value="#{bundle['application.login']}" action="welcome">
+            </h:commandButton> <br/><br/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

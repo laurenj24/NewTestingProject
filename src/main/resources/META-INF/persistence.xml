@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="default">
+
+        <class>com.project01.entities.AddressEntity</class>
+        <class>com.project01.entities.AdressUsersEntity</class>
+        <class>com.project01.entities.BatchsEntity</class>
+        <class>com.project01.entities.BrandsEntity</class>
+        <class>com.project01.entities.CategoriesEntity</class>
+        <class>com.project01.entities.CitiesEntity</class>
+        <class>com.project01.entities.CommandsuppliersEntity</class>
+        <class>com.project01.entities.CommandsuppliersBatchsEntity</class>
+        <class>com.project01.entities.CountriesEntity</class>
+        <class>com.project01.entities.DocumentsEntity</class>
+        <class>com.project01.entities.DocumenttypesEntity</class>
+        <class>com.project01.entities.OrdersEntity</class>
+        <class>com.project01.entities.OrdersDocumentsEntity</class>
+        <class>com.project01.entities.OrdersProductsEntity</class>
+        <class>com.project01.entities.ProductsEntity</class>
+        <class>com.project01.entities.ProductsCategoriesEntity</class>
+        <class>com.project01.entities.RolesEntity</class>
+        <class>com.project01.entities.SuppliersEntity</class>
+        <class>com.project01.entities.UsersEntity</class>
+        <properties>
+            <property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/stockmanagement"/>
+            <property name="toplink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/stockmanagement"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/stockmanagement"/>
+            <property name="openjpa.ConnectionDriverName" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/stockmanagement"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="persistenceUnit"/>
+</persistence>
